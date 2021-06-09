@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update ;\
-    apt-get install -y sudo dsniff vim wget net-tools iproute2 curl
+    apt-get install -y sudo dsniff vim wget net-tools iproute2 curl jq
 
 COPY entrypoint.sh /bin/entrypoint.sh
 
