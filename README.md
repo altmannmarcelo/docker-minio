@@ -88,7 +88,7 @@ docker exec -it keystone bash
 
 
 # Kill all connections from application
-APP_HOST=172.17.0.2
+APP_HOST=172.17.0.1
 timeout 5 tcpkill host ${APP_HOST}
 
 
