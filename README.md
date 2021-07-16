@@ -84,7 +84,7 @@ aws --endpoint-url http://127.0.0.1:9000 s3 ls
 To test how your application will behave under intermittent network issues either on your side or on the provider site you can use below commands
 
 ```
-docker exec -it keystone bash
+docker exec -it s3 bash
 
 
 # Kill all connections from application
