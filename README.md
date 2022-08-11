@@ -20,7 +20,7 @@ I start the container using the following command:
 
 
 ```
-docker run -d --security-opt seccomp=unconfined --cap-add=NET_ADMIN --rm -p 9000:9000 --name s3 altmannmarcelo/minio:latest
+docker run -d --security-opt seccomp=unconfined --cap-add=NET_ADMIN --rm -p 9000:9000 --rm -p 9001:9001 --name s3 altmannmarcelo/minio:latest
 ```
 
 You can edit some envoirement variables to configure your S3 service:
