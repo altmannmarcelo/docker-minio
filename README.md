@@ -109,8 +109,8 @@ tc qdisc del dev eth0 root netem;
 
 ```
 # Test suite
-XBCLOUD_CREDENTIALS="--storage=s3 --s3-endpoint=http://localhost:9000 --s3-access-key=admin --s3-secret-key=password --s3-bucket=my_bucket" ./run.sh
+XBCLOUD_CREDENTIALS="--storage=s3 --s3-endpoint=http://localhost:9000 --s3-access-key=admin --s3-secret-key=password --s3-bucket=newbucket" ./run.sh
 
 # Manually
-xbcloud put --storage=s3 --s3-endpoint='http://localhost:9000' --s3-access-key='admin' --s3-secret-key='password' --s3-bucket='my_bucket' my_backup
+xbcloud put --storage=s3 --s3-endpoint='http://localhost:9000' --s3-access-key='admin' --s3-secret-key='password' --s3-bucket='newbucket' my_backup
 ```
