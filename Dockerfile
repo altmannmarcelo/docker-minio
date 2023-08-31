@@ -8,7 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
 COPY entrypoint.sh /bin/entrypoint.sh
 
 RUN wget https://dl.min.io/server/minio/release/linux-amd64/minio -O /usr/bin/minio && \
-    chmod +x /usr/bin/minio /bin/entrypoint.sh
+    wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/bin/mc && \
+    chmod +x /usr/bin/minio /usr/bin/mc /bin/entrypoint.sh
 
 RUN mkdir /mnt/data
 

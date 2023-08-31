@@ -27,6 +27,8 @@ You can edit some envoirement variables to configure your S3 service:
 * `--env USER` - to change Access Key ID (Default: admin)
 * `--env PASSWORD` - to change Secret Access Key (Default: password)
 * `--env PORT` - to change the endpoint port (Default: 9000)
+* `--env ADMIN_PORT` - to change the admin/web endpoint port (Default: 9001)
+
 
 ```
 docker run -d --security-opt seccomp=unconfined --cap-add=NET_ADMIN --rm -p 9001:9001 --env USER=myuser --env PASSWORD=myStrongPassw0rd! --env PORT=9001 --name s3 altmannmarcelo/minio:latest
@@ -109,8 +111,8 @@ tc qdisc del dev eth0 root netem;
 
 ```
 # Test suite
-XBCLOUD_CREDENTIALS="--storage=s3 --s3-endpoint=http://localhost:9000 --s3-access-key=admin --s3-secret-key=password --s3-bucket=newbucket" ./run.sh
+XBCLOUD_CREDENTIALS="--storage=s3 --s3-endpoint=http://localhost:9000 --s3-access-key=s3user --s3-secret-key=backup123 --s3-bucket=newbucket" ./run.sh
 
 # Manually
-xbcloud put --storage=s3 --s3-endpoint='http://localhost:9000' --s3-access-key='admin' --s3-secret-key='password' --s3-bucket='newbucket' my_backup
+xbcloud put --storage=s3 --s3-endpoint='http://localhost:9000' --s3-access-key='s3user' --s3-secret-key='backup123' --s3-bucket='newbucket' my_backup
 ```
