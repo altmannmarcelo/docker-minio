@@ -104,3 +104,13 @@ tc qdisc add dev eth0 root netem delay 60000ms loss 99%;
 sleep $[($RANDOM%10) + 1]s
 tc qdisc del dev eth0 root netem;
 ```
+
+## Working with Percona XtraBackup
+
+```
+# Test suite
+XBCLOUD_CREDENTIALS="--storage=s3 --s3-endpoint=http://localhost:9000 --s3-access-key=admin --s3-secret-key=password --s3-bucket=my_bucket" ./run.sh
+
+# Manually
+xbcloud put --storage=s3 --s3-endpoint='http://localhost:9000' --s3-access-key='admin' --s3-secret-key='password' --s3-bucket='my_bucket' my_backup
+```
